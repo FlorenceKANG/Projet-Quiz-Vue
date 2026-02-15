@@ -1,4 +1,5 @@
 <script setup>
+import { shuffleArray } from "@/hooks/array";
 import { computed, ref } from "vue";
 
 const props = defineProps({ question: Object });
@@ -7,6 +8,7 @@ const emits = defineEmits(["answer"]);
 const answer = ref(null);
 
 const hasAnswer = computed(() => answer.value);
+const randomOptions = computed(() => shuffleArray(props.question.options));
 </script>
 
 <template>
@@ -15,7 +17,7 @@ const hasAnswer = computed(() => answer.value);
     <nav class="vertical">
       <label
         :for="option.uuid"
-        v-for="option in question.options"
+        v-for="option in randomOptions"
         :key="option.uuid"
         class="radio"
       >
