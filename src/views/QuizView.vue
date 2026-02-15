@@ -2,6 +2,7 @@
 import ErrorState from "@/components/ErrorState.vue";
 import Progress from "@/components/Progress.vue";
 import Question from "@/components/Question.vue";
+import Score from "@/components/Score.vue";
 import Spinner from "@/components/Spinner.vue";
 import { computed, ref, watch } from "vue";
 import { useRoute } from "vue-router";
@@ -14,8 +15,10 @@ const errorMessage = ref("");
 const step = ref(0);
 const answers = ref([]);
 
+const current = ref("question");
+
 const quizId = computed(() => route.params.id);
-const currentQuestion = computed(() => {
+const question = computed(() => {
   if (!quiz.value) return null;
   return quiz.value.questions[step.value] ?? null;
 });
@@ -25,7 +28,9 @@ const addAnswer = (answer) => {
 
   answers.value[step.value] = answer;
 
-  if (step.value < quiz.value.questions.length - 1) {
+  if (step.value === quiz.value.questions.length - 1) {
+    current.value = "score";
+  } else {
     step.value++;
   }
 };
@@ -40,6 +45,7 @@ watch(
     quiz.value = null;
     step.value = 0;
     answers.value = [];
+    current.value = "question";
 
     try {
       const res = await fetch(`/data/${id}.json`);
@@ -74,10 +80,12 @@ watch(
 
     <div class="container">
       <Question
-        :key="currentQuestion.uuid"
-        :question="currentQuestion"
+        :key="question.uuid"
+        :question="question"
         @answer="addAnswer"
+        v-if="current === 'question'"
       />
+      <Score v-else-if="current === 'score'" :quiz="quiz" :answers="answers" />
     </div>
   </div>
 </template>
