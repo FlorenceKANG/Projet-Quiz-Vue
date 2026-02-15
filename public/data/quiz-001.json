@@ -1,0 +1,30 @@
+{
+  "uuid": "quiz-001",
+  "title": "Quiz Culture Générale - Monde & Société",
+  "description": "Testez vos connaissances globales sur la géographie, les institutions et la culture internationale.",
+  "image_url": "https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&w=800&q=80",
+  "questions": [
+    {
+      "uuid": "q-001-1",
+      "question": "Quelle est la capitale du Canada ?",
+      "options": [
+        { "uuid": "q-001-1-a", "label": "Toronto" },
+        { "uuid": "q-001-1-b", "label": "Vancouver" },
+        { "uuid": "q-001-1-c", "label": "Ottawa" },
+        { "uuid": "q-001-1-d", "label": "Montréal" }
+      ],
+      "correct_option_uuid": "q-001-1-c"
+    },
+    {
+      "uuid": "q-001-2",
+      "question": "Quelle organisation gère les Nations Unies ?",
+      "options": [
+        { "uuid": "q-001-2-a", "label": "UNESCO" },
+        { "uuid": "q-001-2-b", "label": "ONU" },
+        { "uuid": "q-001-2-c", "label": "OMS" },
+        { "uuid": "q-001-2-d", "label": "OTAN" }
+      ],
+      "correct_option_uuid": "q-001-2-b"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "uuid": "quiz-003",
+  "title": "Quiz Histoire - Grandes Dates",
+  "description": "Revivez les événements clés qui ont marqué l’histoire mondiale.",
+  "image_url": "https://images.unsplash.com/photo-1461360370896-922624d12aa1",
+  "questions": [
+    {
+      "uuid": "q-003-1",
+      "question": "En quelle année Christophe Colomb atteint-il l’Amérique ?",
+      "options": [
+        { "uuid": "q-003-1-a", "label": "1492" },
+        { "uuid": "q-003-1-b", "label": "1515" },
+        { "uuid": "q-003-1-c", "label": "1453" },
+        { "uuid": "q-003-1-d", "label": "1607" }
+      ],
+      "correct_option_uuid": "q-003-1-a"
+    },
+    {
+      "uuid": "q-003-2",
+      "question": "Qui était le leader de l’Inde lors de son indépendance en 1947 ?",
+      "options": [
+        { "uuid": "q-003-2-a", "label": "Jawaharlal Nehru" },
+        { "uuid": "q-003-2-b", "label": "Mahatma Gandhi" },
+        { "uuid": "q-003-2-c", "label": "Indira Gandhi" },
+        { "uuid": "q-003-2-d", "label": "Subhas Chandra Bose" }
+      ],
+      "correct_option_uuid": "q-003-2-a"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "uuid": "quiz-005",
+  "title": "Quiz Sport - Compétitions Internationales",
+  "description": "Mesurez vos connaissances sur les grandes compétitions et règles sportives.",
+  "image_url": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211",
+  "questions": [
+    {
+      "uuid": "q-005-1",
+      "question": "Combien de minutes dure un match de football (temps réglementaire) ?",
+      "options": [
+        { "uuid": "q-005-1-a", "label": "80 minutes" },
+        { "uuid": "q-005-1-b", "label": "90 minutes" },
+        { "uuid": "q-005-1-c", "label": "100 minutes" },
+        { "uuid": "q-005-1-d", "label": "120 minutes" }
+      ],
+      "correct_option_uuid": "q-005-1-b"
+    },
+    {
+      "uuid": "q-005-2",
+      "question": "Dans quel sport évolue-t-on sur un parquet avec un ballon orange ?",
+      "options": [
+        { "uuid": "q-005-2-a", "label": "Handball" },
+        { "uuid": "q-005-2-b", "label": "Basketball" },
+        { "uuid": "q-005-2-c", "label": "Volleyball" },
+        { "uuid": "q-005-2-d", "label": "Rugby" }
+      ],
+      "correct_option_uuid": "q-005-2-b"
+    }
+  ]
+}

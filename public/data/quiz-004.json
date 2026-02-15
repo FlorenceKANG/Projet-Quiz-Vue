@@ -1,0 +1,30 @@
+{
+  "uuid": "quiz-004",
+  "title": "Quiz Cinéma - Blockbusters & Classiques",
+  "description": "Testez vos connaissances sur les grands succès du cinéma mondial.",
+  "image_url": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba",
+  "questions": [
+    {
+      "uuid": "q-004-1",
+      "question": "Qui a réalisé le film Inception ?",
+      "options": [
+        { "uuid": "q-004-1-a", "label": "Christopher Nolan" },
+        { "uuid": "q-004-1-b", "label": "James Cameron" },
+        { "uuid": "q-004-1-c", "label": "Steven Spielberg" },
+        { "uuid": "q-004-1-d", "label": "Denis Villeneuve" }
+      ],
+      "correct_option_uuid": "q-004-1-a"
+    },
+    {
+      "uuid": "q-004-2",
+      "question": "Dans quel film trouve-t-on le personnage de Jack Sparrow ?",
+      "options": [
+        { "uuid": "q-004-2-a", "label": "Pirates des Caraïbes" },
+        { "uuid": "q-004-2-b", "label": "Harry Potter" },
+        { "uuid": "q-004-2-c", "label": "Le Seigneur des Anneaux" },
+        { "uuid": "q-004-2-d", "label": "Star Wars" }
+      ],
+      "correct_option_uuid": "q-004-2-a"
+    }
+  ]
+}

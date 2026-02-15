@@ -1,0 +1,30 @@
+{
+  "uuid": "quiz-002",
+  "title": "Quiz Sciences - Univers & Vie",
+  "description": "Évaluez vos connaissances en biologie, physique et astronomie.",
+  "image_url": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa",
+  "questions": [
+    {
+      "uuid": "q-002-1",
+      "question": "Quelle est la planète surnommée la planète rouge ?",
+      "options": [
+        { "uuid": "q-002-1-a", "label": "Mars" },
+        { "uuid": "q-002-1-b", "label": "Jupiter" },
+        { "uuid": "q-002-1-c", "label": "Saturne" },
+        { "uuid": "q-002-1-d", "label": "Vénus" }
+      ],
+      "correct_option_uuid": "q-002-1-a"
+    },
+    {
+      "uuid": "q-002-2",
+      "question": "Quelle molécule transporte l'oxygène dans le sang ?",
+      "options": [
+        { "uuid": "q-002-2-a", "label": "Insuline" },
+        { "uuid": "q-002-2-b", "label": "Hémoglobine" },
+        { "uuid": "q-002-2-c", "label": "Adrénaline" },
+        { "uuid": "q-002-2-d", "label": "Collagène" }
+      ],
+      "correct_option_uuid": "q-002-2-b"
+    }
+  ]
+}
