@@ -3,7 +3,6 @@ import ErrorState from "@/components/ErrorState.vue";
 import QuizCard from "@/components/QuizCard.vue";
 import Spinner from "@/components/Spinner.vue";
 import { onMounted, ref } from "vue";
-import { useRouter } from "vue-router";
 
 const quizzes = ref([]);
 const state = ref("idle");

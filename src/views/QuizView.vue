@@ -1,6 +1,7 @@
 <script setup>
 import ErrorState from "@/components/ErrorState.vue";
 import Progress from "@/components/Progress.vue";
+import Question from "@/components/Question.vue";
 import Spinner from "@/components/Spinner.vue";
 import { computed, ref, watch } from "vue";
 import { useRoute } from "vue-router";
@@ -68,25 +69,7 @@ watch(
     <Progress :value="step + 1" :max="quiz.questions.length" />
 
     <div class="container">
-      <h4>{{ currentQuestion.question }}</h4>
-      <fieldset>
-        <nav class="vertical">
-          <label
-            :for="choice.uuid"
-            v-for="choice in currentQuestion.options"
-            :key="choice.uuid"
-            class="radio"
-          >
-            <input
-              :id="choice.uuid"
-              type="radio"
-              name="answer"
-              :value="choice.uuid"
-            />
-            <span>{{ choice.label }}</span>
-          </label>
-        </nav>
-      </fieldset>
+      <Question :question="currentQuestion" />
     </div>
   </div>
   <button class="absolute bottom right" @click="next">Suivant</button>
