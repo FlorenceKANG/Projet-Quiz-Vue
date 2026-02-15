@@ -1,6 +1,6 @@
 <template>
   <header>
-    <img src="./assets/logo.png" alt="logo du site" />
+    <img src="./assets/logo.png" alt="logo du site" width="100" height="100" />
     <h1>Vue Quiz</h1>
   </header>
   <main>

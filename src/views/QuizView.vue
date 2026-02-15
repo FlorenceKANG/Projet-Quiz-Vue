@@ -77,7 +77,7 @@ watch(
 
 <style>
 .container {
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding: 1rem 0;
 }
 </style>

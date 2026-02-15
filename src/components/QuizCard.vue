@@ -10,7 +10,13 @@ const router = useRouter();
   <article class="no-padding">
     <div class="grid no-space">
       <div class="s3">
-        <img class="responsive" :src="quiz.image_url" />
+        <img
+          class="responsive"
+          :src="quiz.image_url"
+          :alt="quiz.title"
+          width="100"
+          height="100"
+        />
       </div>
       <div class="s6">
         <div class="padding">

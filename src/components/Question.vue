@@ -3,7 +3,7 @@ defineProps({ question: Object });
 </script>
 
 <template>
-  <h4>{{ question.question }}</h4>
+  <h3>{{ question.question }}</h3>
   <fieldset>
     <nav class="vertical">
       <label
