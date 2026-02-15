@@ -12,6 +12,7 @@ const quiz = ref(null);
 const state = ref("idle");
 const errorMessage = ref("");
 const step = ref(0);
+const answers = ref([]);
 
 const quizId = computed(() => route.params.id);
 const currentQuestion = computed(() => {
@@ -19,8 +20,10 @@ const currentQuestion = computed(() => {
   return quiz.value.questions[step.value] ?? null;
 });
 
-const next = () => {
+const addAnswer = (answer) => {
   if (!quiz.value) return;
+
+  answers.value[step.value] = answer;
 
   if (step.value < quiz.value.questions.length - 1) {
     step.value++;
@@ -36,6 +39,7 @@ watch(
     errorMessage.value = "";
     quiz.value = null;
     step.value = 0;
+    answers.value = [];
 
     try {
       const res = await fetch(`/data/${id}.json`);
@@ -69,10 +73,13 @@ watch(
     <Progress :value="step + 1" :max="quiz.questions.length" />
 
     <div class="container">
-      <Question :question="currentQuestion" />
+      <Question
+        :key="currentQuestion.uuid"
+        :question="currentQuestion"
+        @answer="addAnswer"
+      />
     </div>
   </div>
-  <button class="absolute bottom right" @click="next">Suivant</button>
 </template>
 
 <style>

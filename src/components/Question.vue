@@ -1,5 +1,12 @@
 <script setup>
-defineProps({ question: Object });
+import { computed, ref } from "vue";
+
+const props = defineProps({ question: Object });
+const emits = defineEmits(["answer"]);
+
+const answer = ref(null);
+
+const hasAnswer = computed(() => answer.value);
 </script>
 
 <template>
@@ -16,10 +23,24 @@ defineProps({ question: Object });
           :id="option.uuid"
           type="radio"
           name="answer"
+          v-model="answer"
           :value="option.uuid"
         />
         <span>{{ option.label }}</span>
       </label>
     </nav>
   </fieldset>
+  <button
+    v-if="hasAnswer"
+    class="absolute right"
+    @click="emits('answer', answer)"
+  >
+    Suivante
+  </button>
 </template>
+
+<style>
+fieldset {
+  margin-bottom: 1rem;
+}
+</style>
