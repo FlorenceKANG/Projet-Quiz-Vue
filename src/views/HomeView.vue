@@ -1,12 +1,17 @@
 <script setup>
 import { onMounted, ref } from "vue";
+import { useRouter } from "vue-router";
 
 const quizzes = ref([]);
 const state = ref("idle");
 const errorMessage = ref("");
 
+const router = useRouter();
+
 onMounted(async () => {
   state.value = "loading";
+  errorMessage.value = "";
+
   try {
     const res = await fetch("/data/quizzes.json");
 
@@ -27,11 +32,11 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="container">
+  <div>
     <div v-if="state === 'loading'" class="middle-align center-align">
       <progress class="circle wavy indeterminate" value="50" max="100" />
     </div>
-    <article v-if="state === 'error'" class="middle-align center-align">
+    <article v-else-if="state === 'error'" class="middle-align center-align">
       <div>
         <div class="row middle-align center-align">
           <i class="extra">error</i>
@@ -40,7 +45,7 @@ onMounted(async () => {
         <p>{{ errorMessage }}</p>
       </div>
     </article>
-    <div v-if="state === 'success'">
+    <div v-else-if="state === 'success'">
       <article v-for="quiz in quizzes" :key="quiz.uuid" class="no-padding">
         <div class="grid no-space">
           <div class="s3">
@@ -53,7 +58,12 @@ onMounted(async () => {
                 {{ quiz.description }}
               </p>
               <nav>
-                <button class="round">Commencer</button>
+                <button
+                  class="round"
+                  @click="router.push(`/quiz/${quiz.uuid}`)"
+                >
+                  Commencer
+                </button>
               </nav>
             </div>
           </div>
@@ -62,9 +72,3 @@ onMounted(async () => {
     </div>
   </div>
 </template>
-
-<style>
-.container {
-  padding: 1rem;
-}
-</style>

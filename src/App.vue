@@ -16,4 +16,9 @@ header {
   gap: 1rem;
   padding: 1rem !important;
 }
+main {
+  margin: 1rem;
+  padding: 1rem;
+  border-top: 1px solid lightgray;
+}
 </style>
