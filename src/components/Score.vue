@@ -1,10 +1,13 @@
 <script setup>
 import { computed } from "vue";
+import { useRouter } from "vue-router";
 
 const props = defineProps({
   quiz: Object,
   answers: Array,
 });
+
+const router = useRouter();
 
 const score = computed(() => {
   return props.quiz.questions.reduce((acc, question, k) => {
@@ -18,10 +21,24 @@ const score = computed(() => {
 </script>
 
 <template>
-  <div class="absolute center">
+  <div class="score">
     <h3>Score</h3>
-    <div class="shape sided-cookie12 extra">
+    <div class="shape sided-cookie12 extra center">
       <p>{{ score }} / {{ quiz.questions.length }}</p>
     </div>
   </div>
+  <div class="right-align bottom-align">
+    <button class="border" @click="router.push('/')">
+      Continuer avec un autre quiz
+    </button>
+  </div>
 </template>
+
+<style>
+h3 {
+  text-align: center;
+}
+.score {
+  margin-bottom: 2rem;
+}
+</style>

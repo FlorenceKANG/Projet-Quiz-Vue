@@ -78,7 +78,7 @@ watch(
     <p>{{ quiz.description }}</p>
     <Progress :value="step + 1" :max="quiz.questions.length" />
 
-    <div class="container">
+    <div class="questions">
       <Question
         :key="question.uuid"
         :question="question"
@@ -91,8 +91,9 @@ watch(
 </template>
 
 <style>
-.container {
+.questions {
   margin-top: 2rem;
   padding: 1rem 0;
+  position: relative;
 }
 </style>
