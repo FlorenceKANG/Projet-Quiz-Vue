@@ -1,4 +1,7 @@
 <script setup>
+import ErrorState from "@/components/ErrorState.vue";
+import Progress from "@/components/Progress.vue";
+import Spinner from "@/components/Spinner.vue";
 import { computed, ref, watch } from "vue";
 import { useRoute } from "vue-router";
 
@@ -56,16 +59,13 @@ watch(
 </script>
 
 <template>
-  <div v-if="state === 'loading'">Chargement...</div>
-  <div v-else-if="state === 'error'">{{ errorMessage }}</div>
+  <Spinner v-if="state === 'loading'" />
+  <ErrorState v-else-if="state === 'error'" :error-message="errorMessage" />
 
   <div v-else-if="state === 'success' && quiz">
     <h2>{{ quiz.title }}</h2>
     <p>{{ quiz.description }}</p>
-    <div class="row">
-      <p>Étape {{ step + 1 }} / {{ quiz.questions.length }}</p>
-      <progress :value="step + 1" :max="quiz.questions.length" />
-    </div>
+    <Progress :value="step + 1" :max="quiz.questions.length" />
 
     <div class="container">
       <h4>{{ currentQuestion.question }}</h4>

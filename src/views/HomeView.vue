@@ -1,4 +1,6 @@
 <script setup>
+import ErrorState from "@/components/ErrorState.vue";
+import Spinner from "@/components/Spinner.vue";
 import { onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
 
@@ -32,43 +34,28 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div>
-    <div v-if="state === 'loading'" class="middle-align center-align">
-      <progress class="circle wavy indeterminate" value="50" max="100" />
-    </div>
-    <article v-else-if="state === 'error'" class="middle-align center-align">
-      <div>
-        <div class="row middle-align center-align">
-          <i class="extra">error</i>
-          <h5>Erreur produite</h5>
+  <Spinner v-if="state === 'loading'" />
+  <ErrorState v-else-if="state === 'error'" :error-message="errorMessage" />
+  <div v-else-if="state === 'success'">
+    <article v-for="quiz in quizzes" :key="quiz.uuid" class="no-padding">
+      <div class="grid no-space">
+        <div class="s3">
+          <img class="responsive" :src="quiz.image_url" />
         </div>
-        <p>{{ errorMessage }}</p>
+        <div class="s6">
+          <div class="padding">
+            <h5>{{ quiz.title }}</h5>
+            <p>
+              {{ quiz.description }}
+            </p>
+            <nav>
+              <button class="round" @click="router.push(`/quiz/${quiz.uuid}`)">
+                Commencer
+              </button>
+            </nav>
+          </div>
+        </div>
       </div>
     </article>
-    <div v-else-if="state === 'success'">
-      <article v-for="quiz in quizzes" :key="quiz.uuid" class="no-padding">
-        <div class="grid no-space">
-          <div class="s3">
-            <img class="responsive" :src="quiz.image_url" />
-          </div>
-          <div class="s6">
-            <div class="padding">
-              <h5>{{ quiz.title }}</h5>
-              <p>
-                {{ quiz.description }}
-              </p>
-              <nav>
-                <button
-                  class="round"
-                  @click="router.push(`/quiz/${quiz.uuid}`)"
-                >
-                  Commencer
-                </button>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
   </div>
 </template>
