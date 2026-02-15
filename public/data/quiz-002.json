@@ -17,14 +17,47 @@
     },
     {
       "uuid": "q-002-2",
-      "question": "Quelle molécule transporte l'oxygène dans le sang ?",
+      "question": "Quel est l’élément chimique dont le symbole est H ?",
       "options": [
-        { "uuid": "q-002-2-a", "label": "Insuline" },
-        { "uuid": "q-002-2-b", "label": "Hémoglobine" },
-        { "uuid": "q-002-2-c", "label": "Adrénaline" },
-        { "uuid": "q-002-2-d", "label": "Collagène" }
+        { "uuid": "q-002-2-a", "label": "Hélium" },
+        { "uuid": "q-002-2-b", "label": "Hydrogène" },
+        { "uuid": "q-002-2-c", "label": "Hafnium" },
+        { "uuid": "q-002-2-d", "label": "Holmium" }
       ],
       "correct_option_uuid": "q-002-2-b"
+    },
+    {
+      "uuid": "q-002-3",
+      "question": "Combien d’os possède un adulte en moyenne ?",
+      "options": [
+        { "uuid": "q-002-3-a", "label": "206" },
+        { "uuid": "q-002-3-b", "label": "201" },
+        { "uuid": "q-002-3-c", "label": "196" },
+        { "uuid": "q-002-3-d", "label": "210" }
+      ],
+      "correct_option_uuid": "q-002-3-a"
+    },
+    {
+      "uuid": "q-002-4",
+      "question": "Quelle planète possède les anneaux les plus visibles ?",
+      "options": [
+        { "uuid": "q-002-4-a", "label": "Mars" },
+        { "uuid": "q-002-4-b", "label": "Neptune" },
+        { "uuid": "q-002-4-c", "label": "Saturne" },
+        { "uuid": "q-002-4-d", "label": "Mercure" }
+      ],
+      "correct_option_uuid": "q-002-4-c"
+    },
+    {
+      "uuid": "q-002-5",
+      "question": "Quel gaz est majoritaire dans l’atmosphère terrestre ?",
+      "options": [
+        { "uuid": "q-002-5-a", "label": "Oxygène" },
+        { "uuid": "q-002-5-b", "label": "Hydrogène" },
+        { "uuid": "q-002-5-c", "label": "Azote" },
+        { "uuid": "q-002-5-d", "label": "CO2" }
+      ],
+      "correct_option_uuid": "q-002-5-c"
     }
   ]
 }

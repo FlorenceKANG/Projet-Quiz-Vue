@@ -6,25 +6,58 @@
   "questions": [
     {
       "uuid": "q-005-1",
-      "question": "Combien de minutes dure un match de football (temps réglementaire) ?",
+      "question": "Combien de minutes dure un match de football ?",
       "options": [
-        { "uuid": "q-005-1-a", "label": "80 minutes" },
-        { "uuid": "q-005-1-b", "label": "90 minutes" },
-        { "uuid": "q-005-1-c", "label": "100 minutes" },
-        { "uuid": "q-005-1-d", "label": "120 minutes" }
+        { "uuid": "q-005-1-a", "label": "80" },
+        { "uuid": "q-005-1-b", "label": "90" },
+        { "uuid": "q-005-1-c", "label": "100" },
+        { "uuid": "q-005-1-d", "label": "120" }
       ],
       "correct_option_uuid": "q-005-1-b"
     },
     {
       "uuid": "q-005-2",
-      "question": "Dans quel sport évolue-t-on sur un parquet avec un ballon orange ?",
+      "question": "Combien de joueurs composent une équipe de basketball sur le terrain ?",
       "options": [
-        { "uuid": "q-005-2-a", "label": "Handball" },
-        { "uuid": "q-005-2-b", "label": "Basketball" },
-        { "uuid": "q-005-2-c", "label": "Volleyball" },
-        { "uuid": "q-005-2-d", "label": "Rugby" }
+        { "uuid": "q-005-2-a", "label": "5" },
+        { "uuid": "q-005-2-b", "label": "6" },
+        { "uuid": "q-005-2-c", "label": "7" },
+        { "uuid": "q-005-2-d", "label": "4" }
       ],
-      "correct_option_uuid": "q-005-2-b"
+      "correct_option_uuid": "q-005-2-a"
+    },
+    {
+      "uuid": "q-005-3",
+      "question": "Quel pays a remporté la Coupe du Monde 2018 ?",
+      "options": [
+        { "uuid": "q-005-3-a", "label": "Allemagne" },
+        { "uuid": "q-005-3-b", "label": "France" },
+        { "uuid": "q-005-3-c", "label": "Brésil" },
+        { "uuid": "q-005-3-d", "label": "Argentine" }
+      ],
+      "correct_option_uuid": "q-005-3-b"
+    },
+    {
+      "uuid": "q-005-4",
+      "question": "Dans quel sport utilise-t-on un volant ?",
+      "options": [
+        { "uuid": "q-005-4-a", "label": "Tennis" },
+        { "uuid": "q-005-4-b", "label": "Badminton" },
+        { "uuid": "q-005-4-c", "label": "Squash" },
+        { "uuid": "q-005-4-d", "label": "Ping-pong" }
+      ],
+      "correct_option_uuid": "q-005-4-b"
+    },
+    {
+      "uuid": "q-005-5",
+      "question": "Combien de sets faut-il gagner en Grand Chelem (hommes) ?",
+      "options": [
+        { "uuid": "q-005-5-a", "label": "2" },
+        { "uuid": "q-005-5-b", "label": "3" },
+        { "uuid": "q-005-5-c", "label": "4" },
+        { "uuid": "q-005-5-d", "label": "5" }
+      ],
+      "correct_option_uuid": "q-005-5-b"
     }
   ]
 }

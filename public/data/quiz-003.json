@@ -17,14 +17,47 @@
     },
     {
       "uuid": "q-003-2",
-      "question": "Qui était le leader de l’Inde lors de son indépendance en 1947 ?",
+      "question": "En quelle année a commencé la Révolution française ?",
       "options": [
-        { "uuid": "q-003-2-a", "label": "Jawaharlal Nehru" },
-        { "uuid": "q-003-2-b", "label": "Mahatma Gandhi" },
-        { "uuid": "q-003-2-c", "label": "Indira Gandhi" },
-        { "uuid": "q-003-2-d", "label": "Subhas Chandra Bose" }
+        { "uuid": "q-003-2-a", "label": "1789" },
+        { "uuid": "q-003-2-b", "label": "1776" },
+        { "uuid": "q-003-2-c", "label": "1804" },
+        { "uuid": "q-003-2-d", "label": "1815" }
       ],
       "correct_option_uuid": "q-003-2-a"
+    },
+    {
+      "uuid": "q-003-3",
+      "question": "Qui était le premier président des États-Unis ?",
+      "options": [
+        { "uuid": "q-003-3-a", "label": "Abraham Lincoln" },
+        { "uuid": "q-003-3-b", "label": "George Washington" },
+        { "uuid": "q-003-3-c", "label": "Thomas Jefferson" },
+        { "uuid": "q-003-3-d", "label": "John Adams" }
+      ],
+      "correct_option_uuid": "q-003-3-b"
+    },
+    {
+      "uuid": "q-003-4",
+      "question": "Le mur de Berlin est tombé en quelle année ?",
+      "options": [
+        { "uuid": "q-003-4-a", "label": "1987" },
+        { "uuid": "q-003-4-b", "label": "1989" },
+        { "uuid": "q-003-4-c", "label": "1991" },
+        { "uuid": "q-003-4-d", "label": "1993" }
+      ],
+      "correct_option_uuid": "q-003-4-b"
+    },
+    {
+      "uuid": "q-003-5",
+      "question": "Qui était l’empereur français en 1804 ?",
+      "options": [
+        { "uuid": "q-003-5-a", "label": "Louis XVI" },
+        { "uuid": "q-003-5-b", "label": "Napoléon Bonaparte" },
+        { "uuid": "q-003-5-c", "label": "Louis XIV" },
+        { "uuid": "q-003-5-d", "label": "Charles X" }
+      ],
+      "correct_option_uuid": "q-003-5-b"
     }
   ]
 }

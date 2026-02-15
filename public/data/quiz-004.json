@@ -17,14 +17,47 @@
     },
     {
       "uuid": "q-004-2",
-      "question": "Dans quel film trouve-t-on le personnage de Jack Sparrow ?",
+      "question": "Quel film a remporté l’Oscar du meilleur film en 1998 ?",
       "options": [
-        { "uuid": "q-004-2-a", "label": "Pirates des Caraïbes" },
-        { "uuid": "q-004-2-b", "label": "Harry Potter" },
-        { "uuid": "q-004-2-c", "label": "Le Seigneur des Anneaux" },
-        { "uuid": "q-004-2-d", "label": "Star Wars" }
+        { "uuid": "q-004-2-a", "label": "Titanic" },
+        { "uuid": "q-004-2-b", "label": "Gladiator" },
+        { "uuid": "q-004-2-c", "label": "Forrest Gump" },
+        { "uuid": "q-004-2-d", "label": "Braveheart" }
       ],
       "correct_option_uuid": "q-004-2-a"
+    },
+    {
+      "uuid": "q-004-3",
+      "question": "Dans quelle saga trouve-t-on Dark Vador ?",
+      "options": [
+        { "uuid": "q-004-3-a", "label": "Star Trek" },
+        { "uuid": "q-004-3-b", "label": "Star Wars" },
+        { "uuid": "q-004-3-c", "label": "Harry Potter" },
+        { "uuid": "q-004-3-d", "label": "Matrix" }
+      ],
+      "correct_option_uuid": "q-004-3-b"
+    },
+    {
+      "uuid": "q-004-4",
+      "question": "Quel acteur incarne Iron Man ?",
+      "options": [
+        { "uuid": "q-004-4-a", "label": "Chris Evans" },
+        { "uuid": "q-004-4-b", "label": "Robert Downey Jr." },
+        { "uuid": "q-004-4-c", "label": "Chris Hemsworth" },
+        { "uuid": "q-004-4-d", "label": "Mark Ruffalo" }
+      ],
+      "correct_option_uuid": "q-004-4-b"
+    },
+    {
+      "uuid": "q-004-5",
+      "question": "Dans quel film trouve-t-on le personnage de Jack Sparrow ?",
+      "options": [
+        { "uuid": "q-004-5-a", "label": "Pirates des Caraïbes" },
+        { "uuid": "q-004-5-b", "label": "Harry Potter" },
+        { "uuid": "q-004-5-c", "label": "Le Seigneur des Anneaux" },
+        { "uuid": "q-004-5-d", "label": "Avatar" }
+      ],
+      "correct_option_uuid": "q-004-5-a"
     }
   ]
 }
